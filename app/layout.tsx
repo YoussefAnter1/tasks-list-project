@@ -32,7 +32,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <ToastContainer theme="colored" position="top-center"/>
-        <main className="container mx-auto p-10">{children}</main>
+        <main className="container mx-auto p-4 md:p-10">{children}</main>
       </body>
     </html>
   );

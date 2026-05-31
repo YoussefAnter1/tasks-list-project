@@ -25,19 +25,19 @@ const EditTaskForm = ({ task }: EditTaskFormProps) => {
   };
 
   return (
-    <form action={clientAction} className="flex flex-col gap-6">
+    <form action={clientAction} className="flex flex-col gap-4 md:gap-6">
       <input type="hidden" value={task.id} name="id" />
       <input
         type="text"
         placeholder="Task Title"
         name="title"
-        className="p-2 text-xl rounded-md text-gray-950 bg-white"
+        className="p-2 text-base md:text-xl rounded-md text-gray-950 bg-white w-full"
         defaultValue={task.title}
       />
       <select
         name="status"
         defaultValue={task.status}
-        className="p-2 text-xl rounded-md text-gray-950 bg-white"
+        className="p-2 text-base md:text-xl rounded-md text-gray-950 bg-white w-full"
       >
         <option value="TODO">TODO</option>
         <option value="IN_PROGRESS">IN_PROGRESS</option>
@@ -48,11 +48,11 @@ const EditTaskForm = ({ task }: EditTaskFormProps) => {
         rows={5}
         placeholder="Task Description"
         defaultValue={task.description}
-        className="p-2 text-xl rounded-md text-gray-950 resize-none bg-white"
+        className="p-2 text-base md:text-xl rounded-md text-gray-950 resize-none bg-white w-full"
       ></textarea>
       <button
         type="submit"
-        className="bg-cyan-300 hover:bg-cyan-400 text-black font-semibold text-xl rounded-md p-3 transition-colors"
+        className="bg-cyan-300 hover:bg-cyan-400 text-black font-semibold text-base md:text-xl rounded-md p-3 transition-colors"
       >
         Edit Task
       </button>

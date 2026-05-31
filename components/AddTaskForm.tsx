@@ -18,22 +18,22 @@ const AddTaskForm = () => {
     await createTask({ title, description } as createTaskDto);
   };
   return (
-    <form action={clientAction} className="flex flex-col gap-6">
+    <form action={clientAction} className="flex flex-col gap-4 md:gap-6">
       <input
         type="text"
         name="title"
         placeholder="Task Title"
-        className="p-2 text-xl rounded-md text-gray-950 bg-white"
+        className="p-2 text-base md:text-xl rounded-md text-gray-950 bg-white w-full"
       />
       <textarea
         name="description"
         rows={5}
         placeholder="Task Description"
-        className="p-2 text-xl rounded-md text-gray-950 resize-none bg-white"
+        className="p-2 text-base md:text-xl rounded-md text-gray-950 resize-none bg-white w-full"
       ></textarea>
       <button
         type="submit"
-        className="bg-cyan-300 hover:bg-cyan-400 text-black font-semibold text-xl rounded-md p-3 transform-none"
+        className="bg-cyan-300 hover:bg-cyan-400 text-black font-semibold text-base md:text-xl rounded-md p-3 transform-none"
       >
         Add Task
       </button>

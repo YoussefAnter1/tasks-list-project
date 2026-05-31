@@ -19,14 +19,14 @@ const TaskDetailsPage = async ({ params }: SinglePageProps) => {
 //   const deleteTaskHandler = deleteTask.bind(null, task.id);
   return (
     <section>
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <Link href={"/"} className="underline">
           {"<< "} Back to tasks table
         </Link>
-        <div className="flex items-center">
+        <div className="flex items-center gap-2">
           <Link
             href={`/task/${task.id}/edit`}
-            className="bg-green-700 hover:bg-green-600 transition-colors rounded-lg py-1 px-2 me-3 text-xl"
+            className="bg-green-700 hover:bg-green-600 transition-colors rounded-lg py-2 px-3 text-base md:text-xl"
           >
             Edit
           </Link>
@@ -34,22 +34,22 @@ const TaskDetailsPage = async ({ params }: SinglePageProps) => {
             <input type="hidden" name="id" value={task.id} />
             <button
               type="submit"
-              className="bg-red-700 hover:bg-red-600 transition-colors rounded-lg py-1 px-2 me-3 text-xl"
+              className="bg-red-700 hover:bg-red-600 transition-colors rounded-lg py-2 px-3 text-base md:text-xl"
             >
               Delete
             </button>
           </form>
         </div>
       </div>
-      <div className="mt-16 p-5 rounded-lg bg-gray-600">
-        <div className="flex items-center justify-between">
-          <h2 className="font-bold text-3xl">{task.title}</h2>
+      <div className="mt-8 md:mt-16 p-4 md:p-5 rounded-lg bg-gray-600">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <h2 className="font-bold text-2xl md:text-3xl">{task.title}</h2>
           <StatusBadge status={task.status} />
         </div>
-        <small className="text-yellow-400">
+        <small className="text-yellow-400 block mt-2">
           {new Date(task.createdAt).toDateString()}
         </small>
-        <p className="mt-5 text-xl">{task.description}</p>
+        <p className="mt-4 md:mt-5 text-base md:text-xl">{task.description}</p>
       </div>
     </section>
   );
