@@ -20,6 +20,8 @@ export const metadata: Metadata = {
   description: "Tasks list app for managing my tasks",
 };
 
+import Navbar from "@/components/Navbar";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -32,7 +34,10 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <ToastContainer theme="colored" position="top-center"/>
-        <main className="container mx-auto p-4 md:p-10">{children}</main>
+        <main className="container mx-auto p-4 md:p-10">
+          <Navbar />
+          {children}
+        </main>
       </body>
     </html>
   );
