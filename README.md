@@ -1,36 +1,104 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tasks List Project
 
-## Getting Started
+![Next.js](https://img.shields.io/badge/Next.js-16.2-black?style=for-the-badge&logo=next.js)
+![React](https://img.shields.io/badge/React-19-blue?style=for-the-badge&logo=react)
+![Prisma](https://img.shields.io/badge/Prisma-7.8-2D3748?style=for-the-badge&logo=prisma)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-8.21-336791?style=for-the-badge&logo=postgresql)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-4-38B2AC?style=for-the-badge&logo=tailwind-css)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript)
 
-First, run the development server:
+## 📝 Description
+
+A robust and modern Task Management application built with Next.js and Prisma. It provides a seamless user experience for managing daily tasks, utilizing a PostgreSQL database for reliable data storage. The project is designed with best practices, including strong typing with TypeScript and data validation using Zod.
+
+## 🚀 Technologies Used
+
+- **Framework**: [Next.js](https://nextjs.org/) (App Router)
+- **UI Library**: [React](https://reactjs.org/)
+- **Database ORM**: [Prisma](https://www.prisma.io/)
+- **Database**: [PostgreSQL](https://www.postgresql.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Validation**: [Zod](https://zod.dev/)
+- **Notifications**: [React Toastify](https://fkhadra.github.io/react-toastify/)
+
+## ✨ Features
+
+- **Task Management**: Create, read, update, and delete tasks (CRUD operations).
+- **Database Integration**: Reliable and type-safe database queries with Prisma ORM and PostgreSQL.
+- **Form Validation**: Strict schema validation using Zod for robust data handling.
+- **Toast Notifications**: Interactive user feedback with React Toastify.
+- **Responsive Design**: Mobile-first styling powered by Tailwind CSS.
+
+## 🛠️ Installation
+
+Follow these steps to set up the project locally:
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/YoussefAnter1/tasks-list-project.git
+   cd tasks-list-project
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables:**
+   Create a `.env` file in the root directory and add your PostgreSQL database connection string:
+   ```env
+   DATABASE_URL="postgresql://user:password@localhost:5432/tasks_db"
+   ```
+
+4. **Initialize the database:**
+   Push the schema to your database (Prisma Client generates automatically via `postinstall`):
+   ```bash
+   npx prisma db push
+   ```
+
+## 💻 Run Locally
+
+To start the development server, run:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:4000](http://localhost:4000) in your browser to view the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📜 Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Here are the available npm scripts for this project:
 
-## Learn More
+- `npm run dev`: Starts the development server on port 4000.
+- `npm run build`: Builds the application for production.
+- `npm run start`: Starts the production server on port 4000.
+- `npm run lint`: Runs ESLint to check for code issues.
+- `npm run postinstall`: Automatically generates the Prisma client.
 
-To learn more about Next.js, take a look at the following resources:
+## 📂 Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```text
+tasks-list-project/
+├── app/               # Next.js App Router pages, layouts, and API routes
+├── components/        # Reusable React UI components
+├── prisma/            # Prisma schema, migrations, and database configuration
+├── public/            # Static assets like images and icons
+├── utils/             # Helper functions and utilities
+├── .env               # Environment variables
+├── package.json       # Project metadata and dependencies
+└── tsconfig.json      # TypeScript configuration
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🔮 Future Improvements
 
-## Deploy on Vercel
+- [ ] Add user authentication (e.g., NextAuth.js / Auth.js).
+- [ ] Implement task categorization and labeling.
+- [ ] Add search and filtering capabilities.
+- [ ] Support drag-and-drop task reordering.
+- [ ] Add dark mode toggle support.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*Developed by [Youssef Anter](https://github.com/YoussefAnter1).*
