@@ -11,7 +11,7 @@ const StatusBadge = ({ status }: StatusBadgeProps) => {
         ? "bg-yellow-400 text-yellow-950"
         : "bg-green-400 text-green-950";
   return (
-    <div className={`${statusColor} py-1 px-2 rounded-lg font-semibold text-sm md:text-base whitespace-nowrap`}>
+    <div className={`${statusColor} py-1 px-2 rounded-lg w-fit font-semibold text-sm md:text-base whitespace-nowrap`}>
       {status.toString()}
     </div>
   );
